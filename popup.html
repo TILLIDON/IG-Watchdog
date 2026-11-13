@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { width: 350px; font-family: sans-serif; padding: 10px; background: #1a1a1a; color: #fff; }
+        h2 { font-size: 16px; margin: 0 0 10px 0; color: #405de6; }
+        .section { margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .count { font-size: 24px; font-weight: bold; }
+        .list { max-height: 100px; overflow-y: auto; font-size: 12px; background: #222; padding: 5px; border-radius: 4px; }
+        .item { padding: 4px 0; border-bottom: 1px dashed #444; }
+        .btn { width: 100%; padding: 8px; margin-top: 10px; background: #405de6; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        .btn:hover { background: #3451d1; }
+        .small { font-size: 10px; color: #888; }
+        .media-info { font-size: 12px; margin-bottom: 5px; }
+        .download-btn { display: block; margin: 5px 0; padding: 6px; background: #222; color: #fff; text-decoration: none; border-radius: 4px; font-size: 12px; text-align: center; }
+        .download-btn:hover { background: #333; }
+        .media-type { display: inline-block; padding: 2px 6px; background: #405de6; border-radius: 10px; font-size: 10px; margin-left: 5px; }
+    </style>
+</head>
+<body>
+    <h2>🛡️ IG Watchdog</h2>
+    
+    <!-- Media Downloader Section -->
+    <div class="section" id="mediaSection">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span><strong>Media Downloader</strong></span>
+            <span id="mediaType" class="media-type">None</span>
+        </div>
+        <div id="mediaInfo" class="media-info">View a post/reel/story to load media.</div>
+        <div id="mediaDownloads"></div>
+    </div>
+
+    <div class="section">
+        <div>Unfollowers <span id="unfCount" class="count">0</span></div>
+        <div id="unfList" class="list"><em class="small">No data yet. Visit your profile.</em></div>
+    </div>
+
+    <div class="section">
+        <div>Potential Blockers <span id="blkCount" class="count">0</span></div>
+        <div id="blkList" class="list"><em class="small">No data yet.</em></div>
+    </div>
+
+    <div class="section">
+        <div>Pending Requests <span id="pndCount" class="count">0</span></div>
+        <div id="pndList" class="list"><em class="small">No pending requests.</em></div>
+    </div>
+
+    <button id="resetBtn" class="btn">Reset Baseline (Start Fresh)</button>
+    <p class="small" style="text-align:center; margin-top:5px;">Data is stored locally in your browser.</p>
+
+    <script src="popup.js"></script>
+</body>
+</html>
